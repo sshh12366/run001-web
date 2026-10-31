@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#087f74">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="RUN润">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>RUN · 润 — 离线手册</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#page=README.md" data-page="README.md" aria-label="RUN 润首页">
+      <span class="brand-mark">润</span><span><strong>RUN · 润</strong><small>海外移居手册 · 离线版</small></span>
+    </a>
+    <div class="top-actions">
+      <span class="offline-badge"><i></i>离线可用</span>
+      <a class="github-link" href="https://github.com/BryceYuuu/RUN" target="_blank" rel="noopener">GitHub 项目 ↗</a>
+    </div>
+  </header>
+  <div class="notice"><span class="notice-icon">!</span><span>本手册仅供一般信息参考，不构成移民、法律、税务或投资建议。规则会变化，行动前请核对各国官方页面。<a href="#page=DISCLAIMER.md" data-page="DISCLAIMER.md">查看完整免责声明</a></span></div>
+  <div id="install-hint" class="install-hint" hidden>在 iPhone 安装：用 Safari 打开，点“分享” → “添加到主屏幕” → 打开“作为网页 App 打开”。首次访问后可离线阅读。</div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <label class="searchbox"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索国家、签证或关键词" autocomplete="off"><kbd>Ctrl K</kbd></label>
+      <div id="nav" class="nav"></div>
+      <div class="sidebar-foot">资料截至 2026 年 10 月<br>原项目内容许可：CC BY-SA 4.0</div>
+    </aside>
+    <main class="mainpane">
+      <div class="reader-head"><div id="breadcrumb" class="breadcrumb">手册 / 首页</div><div class="reader-tools"><span id="readtime"></span><button id="copylink" type="button" title="复制当前页面链接">复制页面链接</button></div></div>
+      <article id="article" class="article" tabindex="-1"></article>
+      <footer class="page-footer">离线阅读版 · 内容来源 <a href="https://github.com/BryceYuuu/RUN" target="_blank" rel="noopener">BryceYuuu/RUN</a> · <a href="#page=LICENSE" data-page="LICENSE">内容许可</a> · <a href="#page=LICENSE-CODE" data-page="LICENSE-CODE">代码许可</a></footer>
+    </main>
+  </div>
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+  <script>if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));</script>
+</body>
+</html>

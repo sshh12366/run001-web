@@ -1,0 +1,15 @@
+RUN · 润 iPhone 离线阅读 App（PWA）
+
+这是可安装到 iPhone 主屏幕的离线网页 App。需先发布到 HTTPS 静态网站；此包尚未上传或公开部署。
+
+发布到 GitHub Pages：
+1. 新建一个愿意公开的 GitHub 仓库。此站点会公开访问；手册源内容本身也在公开仓库中。
+2. 解压本 ZIP，将其中的 index.html、app.js、style.css、content.js、manifest.webmanifest、sw.js 和 icons 文件夹上传到仓库根目录。保留许可证和免责声明文件。
+3. 在仓库 Settings > Pages 中选择从 main 分支的 /(root) 部署并保存，等待 GitHub 给出 HTTPS 页面地址。
+4. 在 iPhone 上用 Safari 打开该 HTTPS 地址，点“分享” > “添加到主屏幕”，开启“作为网页 App 打开”，再点“添加”。
+5. 首次打开时保持联网，等页面加载完成；之后服务工作线程会缓存阅读器和手册内容，可离线阅读。
+
+注意：不要把文件从“文件”App 直接打开后期待安装；主屏幕网页 App 需要从 HTTPS 网站打开。
+项目来源：https://github.com/BryceYuuu/RUN
+原项目内容许可 CC BY-SA 4.0；原项目脚本许可 MIT。随包提供许可全文与免责声明。
+打包日期：2026-10-31
